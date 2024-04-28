@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BadButton
   - GoodButton
+  - test1
   layers:
   - Default
   - TransparentFX
