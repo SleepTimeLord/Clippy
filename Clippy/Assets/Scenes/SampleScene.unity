@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11d67d0baf6d7949a63364d99f90544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sr: {fileID: 1474260228}
   canvas: {fileID: 1734565799}
 --- !u!114 &372576157
 MonoBehaviour:
@@ -536,8 +537,8 @@ GameObject:
   - component: {fileID: 1474260228}
   - component: {fileID: 1474260230}
   m_Layer: 0
-  m_Name: Circle
-  m_TagString: Untagged
+  m_Name: next scene button
+  m_TagString: nextscene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

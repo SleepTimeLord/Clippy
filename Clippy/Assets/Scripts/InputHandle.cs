@@ -4,9 +4,9 @@ using UnityEngine.InputSystem;
 public class InputHandle : MonoBehaviour
 {
     private Camera _mainCamera;
-    private SpriteRenderer sr;
+    public SpriteRenderer sr;
     public GameObject canvas;
-    private bool isCanvasVisible = false;
+    nextscene sceneLoader = new nextscene();
 
     private void Awake()
     {
@@ -16,10 +16,7 @@ public class InputHandle : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1) && isCanvasVisible)
-        {
-            HideCanvas();
-        }
+
     }
 
     public void OnClick(InputAction.CallbackContext context)
@@ -29,25 +26,19 @@ public class InputHandle : MonoBehaviour
         var rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
         if (!rayHit.collider) return;
 
-        if (rayHit.collider.CompareTag("test1"))
+        if (rayHit.collider.CompareTag("test1") && GameData.speechtest == false)
         {
-            ToggleCanvas();
+            canvas.SetActive(true);
+            GameData.speechtest = true;
         }
-        else if (isCanvasVisible)
+        else if (canvas == true)
         {
-            HideCanvas();
+            canvas.SetActive(false);
         }
-    }
 
-    private void ToggleCanvas()
-    {
-        isCanvasVisible = !isCanvasVisible;
-        canvas.SetActive(isCanvasVisible);
-    }
-
-    private void HideCanvas()
-    {
-        isCanvasVisible = false;
-        canvas.SetActive(false);
+        if (rayHit.collider.CompareTag("nextscene") && GameData.speechtest == true)
+        {
+            sceneLoader.LoadScene("DBH Test");
+        }
     }
 }

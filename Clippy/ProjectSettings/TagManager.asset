@@ -7,6 +7,7 @@ TagManager:
   - BadButton
   - GoodButton
   - test1
+  - nextscene
   layers:
   - Default
   - TransparentFX
