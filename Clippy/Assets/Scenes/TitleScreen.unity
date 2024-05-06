@@ -1207,7 +1207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1800713415}
   - component: {fileID: 1800713416}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TitleBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1224,7 +1224,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -683, y: -384, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 3.1872528, y: 3.0244117, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1128749221}
@@ -1463,8 +1463,8 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1352238004}
   - {fileID: 1128749221}
+  - {fileID: 1352238004}
   - {fileID: 1256081396}
   - {fileID: 1858325158}
   - {fileID: 87904817}
